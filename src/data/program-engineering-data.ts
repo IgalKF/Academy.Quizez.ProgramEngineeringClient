@@ -483,23 +483,23 @@ const data: Question[] = [
     },
     {
         // 10.
-        question: 'דוגמה למערכות עיבוד שפה (systems processing Language (יכולה להיות:',
+        question: 'דוגמה למערכות עיבוד שפה (systems processing Language) יכולה להיות:',
         options: [
             {
                 right: false,
-                answer: 'סימולטורים (simulators ('
+                answer: 'סימולטורים (simulators)'
             },
             {
                 right: true,
-                answer: 'מהדרים (compilers('
+                answer: 'מהדרים (compilers)'
             },
             {
                 right: false,
-                answer: 'שרתים (servers('
+                answer: 'שרתים (servers)'
             },
             {
                 right: false,
-                answer: 'דפדנים (browsers ('
+                answer: 'דפדנים (browsers)'
             },
         ]
     },
@@ -1215,7 +1215,7 @@ const data: Question[] = [
     },
     {
         // 7 .
-        question: 'ישנה טענה כי: ההבדל היום בין מוצר תוכנה גנרי (Product Generic (לבין מוצר תוכנה מותאם (Product Customized (קטן יותר ויותר. מהי הסיבה העיקרית לכך ?',
+        question: 'ישנה טענה כי: ההבדל היום בין מוצר תוכנה גנרי (Product Generic) לבין מוצר תוכנה מותאם (Product Customized) קטן יותר ויותר. מהי הסיבה העיקרית לכך ?',
         options: [
             {
                 right: false,
@@ -1259,23 +1259,23 @@ const data: Question[] = [
     },
     {
         // 1.
-        question: 'איזה סעיף כולל אך ורק הבטים ארכיטקטוניים (Views Architectural(',
+        question: 'איזה סעיף כולל אך ורק הבטים ארכיטקטוניים (Views Architectural)',
         options: [
             {
                 right: false,
-                answer: 'הבט לוגי, הבט מכני והבט תיאורטי (View Theoretical, View Mechanical, View Logical ('
+                answer: 'הבט לוגי, הבט מכני והבט תיאורטי (View Theoretical, View Mechanical, View Logical)'
             },
             {
                 right: true,
-                answer: 'הבט לוגי, הבט פיזי והבט תהליכי (View Process, View Physical, View Logical('
+                answer: 'הבט לוגי, הבט פיזי והבט תהליכי (View Process, View Physical, View Logical)'
             },
             {
                 right: false,
-                answer: 'הבט מערכתי, הבט אנושי והבט בטיחותי (View Security, View Human, View System('
+                answer: 'הבט מערכתי, הבט אנושי והבט בטיחותי (View Security, View Human, View System)'
             },
             {
                 right: false,
-                answer: 'הבט תיעודי הבט יצירתי והבט מערכתי (View System, View Creative, View Documentary('
+                answer: 'הבט תיעודי הבט יצירתי והבט מערכתי (View System, View Creative, View Documentary)'
             },
         ]
     },
@@ -1303,7 +1303,7 @@ const data: Question[] = [
     },
     {
         // 3.
-        question: 'תבנית ארכיטקטונית של מאגר (repository (מתאימה בעיקר',
+        question: 'תבנית ארכיטקטונית של מאגר (repository) מתאימה בעיקר',
         options: [
             {
                 right: false,
@@ -1470,7 +1470,7 @@ const data: Question[] = [
             },
             {
                 right: false,
-                answer: 'אפשרות לכתיבה מחדש (refactoring (של אותו קוד'
+                answer: 'אפשרות לכתיבה מחדש (refactoring)של אותו קוד'
             },
             {
                 right: true,
@@ -1502,7 +1502,7 @@ const data: Question[] = [
     },
     {
         // 13.
-        question: 'במערכת משחק קיימים אוביקטים שמיצגים תנועה של כלי רכב על כביש וכן אוביקטים שמייצגים תעופה בחלל. בשלב כלשהו בפיתוח הוחלט כי יש לאפשר גם כלי רכב שהם בעיקרם כלי טיס אך יש להם פונקציונליות של תנועה על הכביש (למשל מטוס נוסע על כביש(. לצורך מימוש פונקציונלית זו יעשה שימוש בתבנית התיכון הבאה :',
+        question: 'במערכת משחק קיימים אוביקטים שמיצגים תנועה של כלי רכב על כביש וכן אוביקטים שמייצגים תעופה בחלל. בשלב כלשהו בפיתוח הוחלט כי יש לאפשר גם כלי רכב שהם בעיקרם כלי טיס אך יש להם פונקציונליות של תנועה על הכביש (למשל מטוס נוסע על כביש). לצורך מימוש פונקציונלית זו יעשה שימוש בתבנית התיכון הבאה :',
         options: [
             {
                 right: false,
@@ -1528,19 +1528,19 @@ const data: Question[] = [
         options: [
             {
                 right: true,
-                answer: 'בשלב התיכון (design('
+                answer: 'בשלב התיכון (design)'
             },
             {
                 right: false,
-                answer: 'בשלב הקידוד (coding('
+                answer: 'בשלב הקידוד (coding)'
             },
             {
                 right: false,
-                answer: 'בשלב הבדיקות (testing('
+                answer: 'בשלב הבדיקות (testing)'
             },
             {
                 right: false,
-                answer: 'שלב שבו המערכת כבר נמצאת אצל הלקוח (launched ('
+                answer: 'שלב שבו המערכת כבר נמצאת אצל הלקוח (launched)'
             },
         ]
     },
@@ -1558,7 +1558,7 @@ const data: Question[] = [
             },
             {
                 right: false,
-                answer: 'תיכון (design('
+                answer: 'תיכון (design)'
             },
             {
                 right: false,
