@@ -19,7 +19,7 @@ const data: Question[] = [
             },
             {
                 right: true,
-                answer: 'הגדרת דרישות, תיכנון (deisgn) ,קידוד, בדיקות, תחזוקה'
+                answer: 'הגדרת דרישות, תיכון (deisgn) ,קידוד, בדיקות, תחזוקה'
             },
             {
                 right: false,
@@ -179,7 +179,7 @@ const data: Question[] = [
                 answer: 'תלוי איזה info התקבל'
             },
             {
-                right: false,
+                right: true,
                 answer: 'לא ניתן לדעת ע"פ חלק זה בדיאגרמה'
             },
         ]
@@ -1310,11 +1310,11 @@ const data: Question[] = [
                 answer: 'עבור מערכות שבהן נדרש זמן תגובה קצר ביותר'
             },
             {
-                right: false,
+                right: true,
                 answer: 'עבור מערכות שבהן נידרש שיתוף משאבים ופיתוח במקביל של שירותים שונים'
             },
             {
-                right: true,
+                right: false,
                 answer: 'עבור מערכות שבהן יש פיתוח אלגוריתמי מורכב'
             },
             {
@@ -1509,7 +1509,7 @@ const data: Question[] = [
                 answer: 'תבנית תיכון מסוג Factory'
             },
             {
-                right: true,
+                right: false,
                 answer: 'תבנית תיכון מסוג Interface'
             },
             {
@@ -1517,7 +1517,7 @@ const data: Question[] = [
                 answer: 'תבנית תיכון מסוג Singleton'
             },
             {
-                right: false,
+                right: true,
                 answer: 'תבנית תיכון מסוג Adapter'
             },
         ]
@@ -1539,7 +1539,7 @@ const data: Question[] = [
                 answer: 'בשלב הבדיקות (testing)'
             },
             {
-                right: false,
+                right: true,
                 answer: 'שלב שבו המערכת כבר נמצאת אצל הלקוח (launched)'
             },
         ]
@@ -1549,11 +1549,11 @@ const data: Question[] = [
         question: 'בנית אב טיפוס יכול להיות חלק משלב הפיתוח הבא :',
         options: [
             {
-                right: true,
+                right: false,
                 answer: 'קדם פיתוח'
             },
             {
-                right: false,
+                right: true,
                 answer: 'הגדרת דרישות'
             },
             {
@@ -1629,6 +1629,29 @@ const data: Question[] = [
             {
                 right: false,
                 answer: 'מהירות הפיתוח'
+            },
+        ]
+    },
+    {
+        // 19.
+        question: '.מה המשמעות של הקוים המקווקוים בדיאגרמת ה sequence הבאה:',
+        image: '4.png',
+        options: [
+            {
+                right: false,
+                answer: 'בקשה מ - B ל - A'
+            },
+            {
+                right: false,
+                answer: 'תשובה מ - B ל - A'
+            },
+            {
+                right: false,
+                answer: 'ציר הזמן'
+            },
+            {
+                right: true,
+                answer: 'יש יותר מתשובה אחת נכונה'
             },
         ]
     },
