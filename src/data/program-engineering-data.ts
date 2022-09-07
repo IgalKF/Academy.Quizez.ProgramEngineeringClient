@@ -179,7 +179,7 @@ const data: Question[] = [
                 answer: 'תלוי איזה info התקבל'
             },
             {
-                right: true,
+                right: false,
                 answer: 'לא ניתן לדעת ע"פ חלק זה בדיאגרמה'
             },
         ]
@@ -1527,7 +1527,7 @@ const data: Question[] = [
         question: 'בשיטת מפל המים השלב שבו שינוי בדרישות יהיה בעל העלות הגבוהה ביותר יהיה',
         options: [
             {
-                right: true,
+                right: false,
                 answer: 'בשלב התיכון (design)'
             },
             {
