@@ -19,10 +19,10 @@ const QuizItem = () => {
 
         if (ref.current) {
             const x = buttonRef.current?.className!;
-            if (buttonRef.current){
+            if (buttonRef.current) {
                 buttonRef.current.className = 'invisible';
             }
-            htmlToImage.toBlob(ref.current)
+            htmlToImage.toBlob(ref.current, { backgroundColor: 'rgb(15 23 42)' })
                 .then(dataUrl => {
                     if (dataUrl) {
                         const file = new File(
@@ -32,10 +32,23 @@ const QuizItem = () => {
                             files: [file],
                         };
 
-                        if (buttonRef.current){
+                        if (buttonRef.current) {
                             buttonRef.current.className = x;
+
+                            if (window.innerWidth < 480)
+                                navigator.share(shareData);
+                            else {
+                                navigator.clipboard.write([
+                                    new ClipboardItem({
+                                        [dataUrl.type]: dataUrl
+                                    })]);
+
+                                buttonRef.current.innerHTML = 'הועתק!'
+                                setTimeout(() => {
+                                    buttonRef.current!.innerHTML = 'העתיקו תמונה'
+                                }, 3000);
+                            }
                         }
-                        navigator.share(shareData);
                     }
                 })
                 .catch(function (error) {
@@ -64,14 +77,14 @@ const QuizItem = () => {
                         </div>
                     ))}
                 </form>
-                <div className="flex flex-col-reverse">
+                <div className="flex items-center flex-col-reverse">
                     {showResults
-                        ? <button className="bg-slate-500 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); setIndex(index + 1); setSelectedId({ answer: '', right: false }); }}>המשך לשאלה הבאה</button>
-                        : <button disabled={selectedId.answer === ''} className="bg-slate-700 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); if (selectedId.right) setScoreCount(x => x + 1); }}>הצג את התשובות</button>
+                        ? <button className="w-9/12 bg-slate-500 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); setIndex(index + 1); setSelectedId({ answer: '', right: false }); }}>המשך לשאלה הבאה</button>
+                        : <button disabled={selectedId.answer === ''} className="w-9/12 bg-slate-700 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); if (selectedId.right) setScoreCount(x => x + 1); }}>הצג את התשובות</button>
                     }
-                    <div className="float-left mt-7">{!showResults ? <div>שאלות שנענו: {index}</div> : '...'}</div>
-                    <div className="float-left mt-7">{!showResults ? 'ציון: ' + Math.floor(scoreCount / (index + 1) * 100) : '...'}</div>
-                    <button ref={buttonRef}  onClick={createImage} className="sm:invisible float-left bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">שתפו תמונה</button>
+                    <div className="float-left mt-7 w-full">{!showResults ? <div>שאלות שנענו: {index}</div> : '...'}</div>
+                    <div className="float-left mt-7 w-full">{!showResults ? 'ציון: ' + Math.floor(scoreCount / (index + 1) * 100) : '...'}</div>
+                    <button ref={buttonRef} onClick={createImage} className="w-5/12 mx-auto bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">{window.innerWidth < 480 ? 'שתפו' : 'העתיקו'} תמונה</button>
                 </div>
             </div>
         </div>
