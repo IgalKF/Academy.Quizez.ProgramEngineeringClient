@@ -17,21 +17,18 @@ const QuizItem = () => {
         console.log(ref.current);
 
         if (ref.current) {
-            htmlToImage.toPng(ref.current)
+            htmlToImage.toBlob(ref.current)
                 .then(dataUrl => {
-                    const file = new File(
-                        [dataUrl],
-                        'image.jpg',
-                        {
-                            type: "image/jpeg",
-                            lastModified: new Date().getTime()
-                        }
-                    )
-                    const shareData = {
-                        files: [file],
-                    };
+                    if (dataUrl) {
+                        const file = new File(
+                            [dataUrl], 'image.png', { type: dataUrl.type }
+                        )
+                        const shareData = {
+                            files: [file],
+                        };
 
-                    navigator.share(shareData);
+                        navigator.share(shareData);
+                    }
                 })
                 .catch(function (error) {
                     console.error('oops, something went wrong!', error);
