@@ -7,6 +7,7 @@ export interface Question {
     question: string;
     image?: string;
     options: Option[];
+    answerImage: string;
 }
 
 const data: Question[] = [
@@ -29,32 +30,33 @@ const data: Question[] = [
                 right: false,
                 answer: 'מודל מפל מים, פיתוח זמיש (אגילי), פיתוח אב טיפוס, צוות פיתוח רבגוני'
             },
-        ]
+        ],
+        answerImage: 'systemDevelopmentIngridienst.png',
     },
     {
-        question: 'דיאגרמת סדר פעולות (diagram sequence) שייכת למשפחה הבאה של דיאגרמות',
+        question: 'דיאגרמת סדר פעולות (sequence diagram) שייכת למשפחה הבאה של דיאגרמות',
         options: [
             {
                 right: false,
-                answer: 'מודלי הקשר (models context)'
+                answer: 'מודלי הקשר (context models)'
             },
             {
                 right: true,
-                answer: 'מודלי אינטראקציה (models interaction)'
+                answer: 'מודלי אינטראקציה (interaction models)'
             },
             {
                 right: false,
-                answer: 'מודלי מבנה (models structure)'
+                answer: 'מודלי מבנה (structure models)'
             },
             {
                 right: false,
-                answer: 'מודלי התנהגות (models behavioural)'
+                answer: 'מודלי התנהגות (behavioural models)'
             },
-        ]
+        ],
+        answerImage: 'interactionModels.png',
     },
     {
-        // 3 .
-        question: 'תבניות תיכון Patterns Design משמשות',
+        question: 'תבניות תיכון Design Patterns משמשות',
         options: [
             {
                 right: false,
@@ -72,11 +74,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'ליצירת קשר טוב בין המפתחים לבין משתמשי הקצה של המערכת'
             },
-        ]
+        ],
+        answerImage: 'designPatternsUsageReason.png',
     },
     {
-        // 4 .
-        question: 'תפקידיו העיקריים של בעל המוצר (owner product) הם :',
+        question: 'תפקידיו העיקריים של בעל המוצר (product owner) הם :',
         options: [
             {
                 right: false,
@@ -94,10 +96,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'שימור הידע אודות קצב ביצוע הפרויקט ביחס לתוכנית המקורית'
             },
-        ]
+        ],
+        answerImage: 'productOwnersJob.png',
     },
     {
-        question: 'מהן בדיקות וריפיקציה (Test Verification)',
+        question: 'מהן בדיקות וריפיקציה (Verification Test)',
         options: [
             {
                 right: true,
@@ -115,7 +118,8 @@ const data: Question[] = [
                 right: false,
                 answer: ' תשובות ב ו - ג נכונות'
             },
-        ]
+        ],
+        answerImage: 'verificationTests.png',
     },
     {
         question: ':Factory Method העיצוב תבנית',
@@ -136,12 +140,11 @@ const data: Question[] = [
                 right: true,
                 answer: 'יוצרת את המופע הרלוונטי בהתאם לבקשת המשתמש'
             },
-        ]
+        ],
+        answerImage: 'factoryMethod.png',
     },
     {
-        // 7 .
-
-        question: 'חסרון\נות אופיני\ים לשיטת ה - Reuse',
+        question: 'חסרונות אופיניים לשיטת ה - Reuse',
         options: [
             {
                 right: true,
@@ -159,10 +162,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'מהירות הפיתוח'
             },
-        ]
+        ],
+        answerImage: 'reuseCons.png',
     },
     {
-        // 8 .
         question: 'מה המשמעות של הסימון המוקף באדום בדיאגרמת ה sequence הבאה:',
         image: '3.png',
         options: [
@@ -182,12 +185,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'לא ניתן לדעת ע"פ חלק זה בדיאגרמה'
             },
-        ]
+        ],
+        answerImage: 'sequenceDiagram.png',
     },
     {
-        // 9 .
-
-        question: 'מערכת תוכנה לפי כללי הנדסת תוכנה :',
+        question: 'מערכת תוכנה לפי כללי הנדסת תוכנה:',
         options: [
             {
                 right: false,
@@ -205,11 +207,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'עלות פיתוח נמוכה ביותר'
             },
-        ]
+        ],
+        answerImage: 'goodSoftwareCharacteristics.png',
     },
     {
-        // 10 .
-
         question: 'דרישות רגולטריות/אתיות הינן בדרך כלל',
         options: [
             {
@@ -228,11 +229,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'דרישות קלות למימוש'
             },
-        ]
+        ],
+        answerImage: 'nonFunctionalRequirements.png',
     },
     {
-        //  11 .
-
         question: 'לאיזה מודל שייך ה - UML',
         options: [
             {
@@ -251,11 +251,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'אף אחת מהתשובות איננה נכונה'
             },
-        ]
+        ],
+        answerImage: 'uml.png',
     },
     {
-        //  12 .
-
         question: 'יתרונות של פיתוח אגילי על פני פיתוח מבוסס מפל מים',
         options: [
             {
@@ -274,10 +273,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'פיתוח תוכנ ה אגילי מתאים יותר ללקוחות שדורשים עמידה במפרטים ידועים מראש'
             },
-        ]
+        ],
+        answerImage: 'agileFeatures.png',
     },
     {
-        // 1
         question: 'בדיאגרמת המחלקות הבאה, קשרי ההכלה מראים כי:',
         image: '1.png',
         options: [
@@ -297,11 +296,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'המחלקות Department, office מכילות במבני נתונים קבועים את המחלקה Company'
             },
-        ]
+        ],
+        answerImage: 'umlControls.png'
     },
     {
-        // 2 .
-
         question: 'כיצד הסעיף במנשר האג`ילי שאומר את הדבר הבא: " שיתוף פעולה עם לקוחות על פני חוזים ומשא ומתן" מתבצע בפועל בשיטה האג`ילית:',
         options: [
             {
@@ -310,7 +308,7 @@ const data: Question[] = [
             },
             {
                 right: true,
-                answer: 'בעל מוצר (Owner Product) שעובד בשיתוף פעולה מלא עם הלקוחות'
+                answer: 'בעל מוצר (Product Owner) שעובד בשיתוף פעולה מלא עם הלקוחות'
             },
             {
                 right: false,
@@ -320,11 +318,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'כל התשובות נכונות'
             },
-        ]
+        ],
+        answerImage: 'productOwnersJob.png',
     },
     {
-        // 3 .
-        question: 'אלו מהבאים הינן שיטות לגילוי דרישות (elicitation Requirements) .',
+        question: 'אלו מהבאים הינן שיטות לגילוי דרישות (Requirements elicitation) .',
         options: [
             {
                 right: false,
@@ -342,16 +340,15 @@ const data: Question[] = [
                 right: false,
                 answer: 'למידת מערכות קיימות'
             },
-        ]
+        ],
+        answerImage: 'collectingRequirements.png',
     },
     {
-        // 4 .
-
-        question: 'עקרון ה - reuse כולל 4 רמות, אחת מהן היא הרמה האבסטרקטית (level Abstraction) ובה:',
+        question: 'עקרון ה - reuse כולל 4 רמות, אחת מהן היא הרמה האבסטרקטית (Abstraction level) ובה:',
         options: [
             {
                 right: true,
-                answer: 'עושים שימוש חוזר בידע משותף, כגון: pattern design'
+                answer: 'עושים שימוש חוזר בידע משותף, כגון: design pattern'
             },
             {
                 right: false,
@@ -365,7 +362,8 @@ const data: Question[] = [
                 right: false,
                 answer: 'אין תשובה נכונה'
             },
-        ]
+        ],
+        answerImage: 'designPatternsReuse.png',
     },
     {
         // 5 .
@@ -388,11 +386,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'בדיקות לא מתבצעות כלל'
             },
-        ]
+        ],
+        answerImage: 'vModel.png',
     },
     {
-        // 6 .
-
         question: 'חברת Microsoft החליטה לבצע שינוי ושיפור של מוצרי ה - Office לטובת לקוח פרימיום שלה, מה מהבאים הוא הגדרה נכונה למהלך זה:',
         options: [
             {
@@ -411,11 +408,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'אין תשובה נכונה'
             },
-        ]
+        ],
+        answerImage: 'genericAndCustomizedProduct.png',
     },
     {
-        // 7 .
-
         question: 'ספריית ה - jUnit ברוב המקרים אינה מאפשרת בדיקות:',
         options: [
             {
@@ -434,11 +430,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'System Test'
             },
-        ]
+        ],
+        answerImage: 'developmentTesting.png',
     },
     {
-        // 8 .
-
         question: 'בפגישת סקירת ספרינט מתבצע בדר"כ Demo מהי מטרתו ?',
         options: [
             {
@@ -457,11 +452,11 @@ const data: Question[] = [
                 right: true,
                 answer: 'הצגת תוצרי הספרינט הנוכחי'
             },
-        ]
+        ],
+        answerImage: 'demo.png',
     },
     {
-        // 9 .
-        question: 'חלק מבעיות הפיתוח והיישום היא בעיית ה - Target Host ,מהי הבעיה ?',
+        question: 'חלק מבעיות הפיתוח והיישום היא בעיית ה - Host Target ,מהי הבעיה ?',
         options: [
             {
                 right: false,
@@ -479,33 +474,10 @@ const data: Question[] = [
                 right: false,
                 answer: `תשובות ב' ו - ג' נכונות`
             },
-        ]
+        ],
+        answerImage: 'hostTarget.png',
     },
     {
-        // 10.
-        question: 'דוגמה למערכות עיבוד שפה (systems processing Language) יכולה להיות:',
-        options: [
-            {
-                right: false,
-                answer: 'סימולטורים (simulators)'
-            },
-            {
-                right: true,
-                answer: 'מהדרים (compilers)'
-            },
-            {
-                right: false,
-                answer: 'שרתים (servers)'
-            },
-            {
-                right: false,
-                answer: 'דפדנים (browsers)'
-            },
-        ]
-    },
-    {
-        // . 1
-
         question: 'Professional Software Development - ל Software Development בין השוני מהו',
         options: [
             {
@@ -524,7 +496,8 @@ const data: Question[] = [
                 right: true,
                 answer: `סעיפים ב' ו - ג' נכונים`
             },
-        ]
+        ],
+        answerImage: 'proVsStandaloneDevelopment.png',
     },
     {
         // 2 .
@@ -551,15 +524,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'שלב ה - requirements'
             },
-        ]
+        ],
+        answerImage: 'systemDevelopmentIngridienst.png',
     },
     {
-        // 3 .
-        // (א) 
-        // (ב) 
-        // (ג) 
-        // (ד) 
-
         question: 'כיצד השיטה האגילית עושה שימוש ב - TDD',
         options: [
             {
@@ -578,37 +546,33 @@ const data: Question[] = [
                 right: false,
                 answer: `תשובות א' ו - ב' נכונות`
             },
-        ]
+        ],
+        answerImage: 'agilePros.png'
     },
     {
-        // . 4
         question: 'use case בתרשים',
         options: [
             {
                 right: false,
-                answer: 'בכל תרשים מוצג case use יחיד'
+                answer: 'בכל תרשים מוצג use case יחיד'
             },
             {
                 right: false,
-                answer: 'בכל תרשים מוצגים לכל היותר 7 cases use ,כדי שיהיה ברור וקריא'
+                answer: 'בכל תרשים מוצגים לכל היותר 7 use cases ,כדי שיהיה ברור וקריא'
             },
             {
                 right: true,
-                answer: 'כאשר ישנם מספר רב של cases use הם יכולים להיות מוצגים במספר תרשימים'
+                answer: 'כאשר ישנם מספר רב של use cases הם יכולים להיות מוצגים במספר תרשימים'
             },
             {
                 right: false,
-                answer: 'כל ה - cases-use של מערכת אחת מוצגים בתרשים אחד'
+                answer: 'כל ה - use-cases של מערכת אחת מוצגים בתרשים אחד'
             },
-        ]
+        ],
+        answerImage: 'useCaseDiagramRecommendations.png',
     },
     {
-        // 5 .
-        // (א) 
-        // (ב) 
-        // (ג) 
-        // (ד) 
-        question: 'בתרשים המתואר אילו מהמשפטים הבאים יכול להיות נכון ?',
+        question: 'בתרשים המתואר אילו מהמשפטים הבאים יכול להיות נכון?',
         image: '2.png',
         options: [
             {
@@ -627,10 +591,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'אף אחת מהתשובות אינה נכונה'
             },
-        ]
+        ],
+        answerImage: 'merging.png',
     },
     {
-        // 6 .
         question: 'מהו המשפט הנכון בהשוואה של פיתוח אגילי אל מול פיתוח מבוסס מפל מים',
         options: [
             {
@@ -649,10 +613,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'ישנם יותר שלבי פיתוח במודל מפל המים לעומת הפיתוח האגילי'
             },
-        ]
+        ],
+        answerImage: 'agileFeatures.png'
     },
     {
-        // 7 .
         question: 'מהו החיסרון העקרי בארכיטקטורת ה - Repository',
         options: [
             {
@@ -671,11 +635,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'כיוון שלא ניתן לחלק לשכבות קשה להרחיב מערכות שכתובות כך'
             },
-        ]
+        ],
+        answerImage: 'repositoryCons.png',
     },
     {
-        // 8 .
-        question: 'חלק מבעיות הפיתוח והיישום היא בעיית ה - Target Host ,כיצד ניתן להתמודד עם בעיה זו',
+        question: 'חלק מבעיות הפיתוח והיישום היא בעיית ה - Host Target ,כיצד ניתן להתמודד עם בעיה זו',
         options: [
             {
                 right: false,
@@ -687,13 +651,14 @@ const data: Question[] = [
             },
             {
                 right: false,
-                answer: 'שימוש ב - Pattern Design'
+                answer: 'שימוש ב - design pattern'
             },
             {
                 right: true,
                 answer: `תשובות א' ו - ב' נכונות`
             },
-        ]
+        ],
+        answerImage: 'hostTarget.png',
     },
     {
         // . 1
@@ -715,29 +680,8 @@ const data: Question[] = [
                 right: true,
                 answer: `סעיפים ב' ו - ג' נכונים`
             },
-        ]
-    },
-    {
-        // 2 .
-        question: 'לאיזה שלב שייך ה - diagram class',
-        options: [
-            {
-                right: false,
-                answer: 'שלב ה - model interaction'
-            },
-            {
-                right: false,
-                answer: 'שלב ה - model structure'
-            },
-            {
-                right: true,
-                answer: 'שלב ה - development & design'
-            },
-            {
-                right: false,
-                answer: 'שלב ה - architecture'
-            },
-        ]
+        ],
+        answerImage: 'proVsStandaloneDevelopment.png',
     },
     {
         // 3
@@ -759,7 +703,8 @@ const data: Question[] = [
                 right: false,
                 answer: 'כיוון שלא ניתן כיום לפתח Product Generic Software ללא שימוש ב- Software Customize Product'
             },
-        ]
+        ],
+        answerImage: 'genericAndCustomizedProduct.png',
     },
     {
         // 4 .
@@ -781,15 +726,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'הרצת המטודה פעם אחת אחרי הרצת כל הטסטים'
             },
-        ]
+        ],
+        answerImage: 'beforeAnnotation.png',
     },
     {
-        // 5 .
-        // (א) 
-        // (ב) 
-        // (ג) 
-        // (ד ) 
-
         question: 'מהו המשפט הנכון בהשוואה של פיתוח אגילי אל מול פיתוח מבוסס מפל מים',
         options: [
             {
@@ -808,10 +748,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'ישנם יותר שלבי פיתוח במודל מפל המים לעומת הפיתוח האגילי'
             },
-        ]
+        ],
+        answerImage: 'agilePros.png',
     },
     {
-        // 6 .
         question: 'כיצד השיטה האגילית עושה שימוש ב - TDD',
         options: [
             {
@@ -830,7 +770,8 @@ const data: Question[] = [
                 right: false,
                 answer: `תשובות א' ו - ב' נכונות`
             },
-        ]
+        ],
+        answerImage: 'agilePros.png',
     },
     {
         // 7
@@ -852,11 +793,12 @@ const data: Question[] = [
                 right: false,
                 answer: 'מקביליות'
             },
-        ]
+        ],
+        answerImage: 'commandPattern.png',
     },
     {
         // 8 .
-        question: 'מהו ציר הזמן שיש לקרוא /לכתוב את ה - diagram sequence',
+        question: 'מהו ציר הזמן שיש לקרוא /לכתוב את ה - sequence diagram',
         options: [
             {
                 right: true,
@@ -874,7 +816,8 @@ const data: Question[] = [
                 right: false,
                 answer: 'right to left'
             },
-        ]
+        ],
+        answerImage: 'sequenceDiagram.png',
     },
     {
         // 9.
@@ -896,10 +839,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'למערכות שעובדות באינטרנט יש בדרך כלל זמן תגובה יותר מהיר'
             },
-        ]
+        ],
+        answerImage: 'webServices.png',
     },
     {
-        // 10 .
         question: 'דרישה שבכל מסך יופיע בחלק העליון לוגו של החברה',
         options: [
             {
@@ -918,32 +861,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'איננו דרישה בכלל'
             },
-        ]
+        ],
+        answerImage: 'functionalAndNonFunctionalRequirementsDiffervence.png',
     },
     {
-        // 11.
-        question: 'אלו מהבאים הינן שיטות לגילוי דרישות (elicitation Requirements).',
-        options: [
-            {
-                right: false,
-                answer: 'תרחישי שימוש'
-            },
-            {
-                right: false,
-                answer: 'ראיונות ותצפיות על סביבת העבודה'
-            },
-            {
-                right: true,
-                answer: 'כל התשובות נכונות'
-            },
-            {
-                right: false,
-                answer: 'למידת מערכות קיימות'
-            },
-        ]
-    },
-    {
-        // .12
         question: 'נכונה Client Server בארכיטקטורה',
         options: [
             {
@@ -962,7 +883,8 @@ const data: Question[] = [
                 right: true,
                 answer: 'כל שרת מעניק שירות אחד'
             },
-        ]
+        ],
+        answerImage: 'clientServer.png',
     },
     {
         // 13.
@@ -984,32 +906,10 @@ const data: Question[] = [
                 right: false,
                 answer: `תשובות ב' ו - ג' נכונות`
             },
-        ]
+        ],
+        answerImage: 'reuseConvention.png',
     },
     {
-        // 14.
-        question: 'מהו החיסרון העקרי בארכיטקטורת ה - Repository',
-        options: [
-            {
-                right: false,
-                answer: 'לא ניתן להשתמש בה ב - web'
-            },
-            {
-                right: false,
-                answer: 'מסובכת מאוד למימוש'
-            },
-            {
-                right: true,
-                answer: 'קשה להפצה על גבי מספר מכונות'
-            },
-            {
-                right: false,
-                answer: 'כיוון שלא ניתן לחלק לשכבות קשה להרחיב מערכות שכתובות כך'
-            },
-        ]
-    },
-    {
-        // 15.
         question: 'תכונות שחשובות לדרישות טובות',
         options: [
             {
@@ -1028,10 +928,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'כל דרישה קשורה לבעל עניין אחד, מנוסחות באופן מצומצם ככל האפשר'
             },
-        ]
+        ],
+        answerImage: 'goodSystemRequirements.png',
     },
     {
-        // 16.
         question: 'אם אני מחליט להעלות את קוד המקור שלי ל - GitHub כ - source Open ,היתרונות שלי הם',
         options: [
             {
@@ -1050,11 +950,11 @@ const data: Question[] = [
                 right: true,
                 answer: 'כל התשובות נכונות'
             },
-        ]
+        ],
+        answerImage: 'git.png',
     },
     {
-        // 17.
-        question: 'תבנית העיצוב Method Factory יוצרת את המופע הרלוונטי בהתאם לבקשת המשתמש. כיצד היא עושה זאת ?',
+        question: 'תבנית העיצוב Factory Method יוצרת את המופע הרלוונטי בהתאם לבקשת המשתמש. כיצד היא עושה זאת ?',
         options: [
             {
                 right: false,
@@ -1072,10 +972,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'בחתימת המטודה היא מחזירה interface שממנו יורשים ה - Classes Concrete'
             },
-        ]
+        ],
+        answerImage: 'factoryMethod.png',
     },
     {
-        // 18.
         question: 'בתרשים המתואר אילו מהמשפטים הבאים הוא הנכון ?',
         image: '2.png',
         options: [
@@ -1095,32 +995,32 @@ const data: Question[] = [
                 right: false,
                 answer: 'לא ניתן לדעת'
             },
-        ]
+        ],
+        answerImage: 'merging.png'
     },
     {
-        // 1 .
         question: 'לאיזה מודל שייך ה - diagram class',
         options: [
             {
                 right: false,
-                answer: 'מודל ה - model interaction'
-            },
-            {
-                right: false,
-                answer: 'מודל ה - model structure'
+                answer: 'מודל ה - interaction model'
             },
             {
                 right: true,
+                answer: 'מודל ה - structure model'
+            },
+            {
+                right: false,
                 answer: 'מודל ה - development & design'
             },
             {
                 right: false,
                 answer: 'מודל ה - requirements'
             },
-        ]
+        ],
+        answerImage: 'stracturalModels.png',
     },
     {
-        // 2 .
         question: 'מהו היתרון הגדול של התבנית הארכיטקטונית מודל השכבות',
         options: [
             {
@@ -1139,16 +1039,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'יש יותר מתשובה אחת נכונה'
             },
-        ]
+        ],
+        answerImage: 'layerdArchitecture.png',
     },
     {
-        // 3 .
-        //  (א(
-        //  (ב(
-        //  (ג(
-        //  (ד(
-
-        question: 'מהו ציר האינטרקציה שיש לקרוא\לכתוב את ה - diagram sequence',
+        question: 'מהו ציר האינטרקציה שיש לקרוא לכתוב את ה - sequence diagram',
         options: [
             {
                 right: true,
@@ -1166,10 +1061,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'right to left'
             },
-        ]
+        ],
+        answerImage: 'sequenceDiagram.png',
     },
     {
-        // 5.
         question: 'ע"פ התרשים המתואר, ברצוני לבנות גירסה חדשה בענף B ללקוח הכוללת את התקדמות ענף C בלבד. כיצד עליי לעשות זאת (הניחו כי הגירסאות בענפים, ממוספרות בסדר עולה ע"פ ציר התקדמות שלהם, ז"א נקודה ראשונה אדומה היא גירסה 1 של ענף B נקודה שניה אדומה היא גירסה 2 של ענף B וגירסה 1 של ענף A ו - C ? (',
         image: '2.png',
         options: [
@@ -1189,10 +1084,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'עליי למזג את גירסה 3 של ענף A עם גירסה 3 של ענף B'
             },
-        ]
+        ],
+        answerImage: 'merging.png',
     },
     {
-        // 6 .
         question: 'תרשים מחלקות יכול לסייע',
         options: [
             {
@@ -1211,10 +1106,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'לשמור על מבנה לוגי של הקוד ולבצע חישובי זמנים של ריצה ו'
             },
-        ]
+        ],
+        answerImage: 'classDiagram.png',
     },
     {
-        // 7 .
         question: 'ישנה טענה כי: ההבדל היום בין מוצר תוכנה גנרי (Product Generic) לבין מוצר תוכנה מותאם (Product Customized) קטן יותר ויותר. מהי הסיבה העיקרית לכך ?',
         options: [
             {
@@ -1233,11 +1128,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'לא אחת מהסיבות הנ"ל'
             },
-        ]
+        ],
+        answerImage: 'genericAndCustomizedProduct.png',
     },
     {
-        // 8.
-        question: 'מה מהדרישות שלהלן הוא דרישה לא פונקציונליות?',
+        question: 'מה מהדרישות שלהלן הוא דרישה לא פונקציונלית?',
         options: [
             {
                 right: false,
@@ -1255,32 +1150,32 @@ const data: Question[] = [
                 right: false,
                 answer: 'התאמה למכשירי Android'
             },
-        ]
+        ],
+        answerImage: 'nonFunctionalRequirements.png',
     },
     {
-        // 1.
-        question: 'איזה סעיף כולל אך ורק הבטים ארכיטקטוניים (Views Architectural)',
+        question: 'איזה סעיף כולל אך ורק הבטים ארכיטקטוניים (Architectural Views)',
         options: [
             {
                 right: false,
-                answer: 'הבט לוגי, הבט מכני והבט תיאורטי (View Theoretical, View Mechanical, View Logical)'
+                answer: 'הבט לוגי, הבט מכני והבט תיאורטי (Theoretical View, Mechanical View, Logical View)'
             },
             {
                 right: true,
-                answer: 'הבט לוגי, הבט פיזי והבט תהליכי (View Process, View Physical, View Logical)'
+                answer: 'הבט לוגי, הבט פיזי והבט תהליכי (Process View, Physical View, Logical View)'
             },
             {
                 right: false,
-                answer: 'הבט מערכתי, הבט אנושי והבט בטיחותי (View Security, View Human, View System)'
+                answer: 'הבט מערכתי, הבט אנושי והבט בטיחותי (Security View, Human View, System View)'
             },
             {
                 right: false,
-                answer: 'הבט תיעודי הבט יצירתי והבט מערכתי (View System, View Creative, View Documentary)'
+                answer: 'הבט תיעודי הבט יצירתי והבט מערכתי (System View, Creative View, Documentary View)'
             },
-        ]
+        ],
+        answerImage: 'architecturalViews.png',
     },
     {
-        // 2.
         question: 'מהו היתרון בשימוש בתבנית הארכיטקטורה של מודל השכבות',
         options: [
             {
@@ -1299,10 +1194,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'אף תשובה איננה נכונה'
             },
-        ]
+        ],
+        answerImage: 'layerdArchitecture.png',
     },
     {
-        // 3.
         question: 'תבנית ארכיטקטונית של מאגר (repository) מתאימה בעיקר',
         options: [
             {
@@ -1321,11 +1216,11 @@ const data: Question[] = [
                 right: false,
                 answer: 'עבור מערכות צבאיות'
             },
-        ]
+        ],
+        answerImage: 'repositoryPattern.png',
     },
     {
-        //     4 .
-        question: 'בתרשים המתואר אילו מהמשפטים הבאים הוא הנכון ?',
+        question: 'בתרשים המתואר אילו מהמשפטים הבאים הוא הנכון?',
         image: '2.png',
         options: [
             {
@@ -1344,10 +1239,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'לא ניתן לדעת'
             },
-        ]
+        ],
+        answerImage: 'merging.png',
     },
     {
-        // 5.
         question: 'תרשים מחלקות יכול לסייע',
         options: [
             {
@@ -1366,10 +1261,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'להגדיר יחס היררכי של מחלקות ואוביקטים, להגדיר תכונות של מחלקות'
             },
-        ]
+        ],
+        answerImage: 'classDiagram.png',
     },
     {
-        // 6.
         question: 'פיתוח לפי שיטת מפל המים יהיה מועיל כאשר',
         options: [
             {
@@ -1388,10 +1283,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'כאשר לא ניתן להגדיר מראש באופן ברור מי יהיה הלקוח הסופי'
             },
-        ]
+        ],
+        answerImage: 'waterfallFeatures.png',
     },
     {
-        // 7.
         question: 'תבנית תיכון מסוג סינגלטון שימושית כאשר',
         options: [
             {
@@ -1410,10 +1305,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'האוביקט הנדרש מגדיר שליטה על משאב מצומצם במערכת'
             },
-        ]
+        ],
+        answerImage: 'singleton.png',
     },
     {
-        // 8.
         question: 'תבנית תיכון מסוג MVC שימושית בעיקר ל -',
         options: [
             {
@@ -1432,10 +1327,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'מערכות שזמן הפיתוח שלהן ארוך והדרישות לא ידועות מראש'
             },
-        ]
+        ],
+        answerImage: 'mvcReasons.png',
     },
     {
-        // 9.
         question: 'דרישה שממשק המשתמש יאפשר הדרכה קצרה (לכל היותר שעתיים) הינה',
         options: [
             {
@@ -1454,10 +1349,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'דרישה סבירה אך מורכבת למימוש'
             },
-        ]
+        ],
+        answerImage: 'nonFunctionalRequirements.png',
     },
     {
-        // 11.
         question: 'החסרונות של פיתוח אג`ילי כוללים',
         options: [
             {
@@ -1476,10 +1371,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'כל התשובות נכונות'
             },
-        ]
+        ],
+        answerImage: 'agileFeatures.png'
     },
     {
-        // 12.
         question: 'אילו מהבאים איננו "דרישה לא פונקציונליות"',
         options: [
             {
@@ -1498,32 +1393,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'המערכת צריכה להיכתב בשפת JAVA כדי להתאים לשאר המערכות שפותחו עבור לקוח זה.'
             },
-        ]
+        ],
+        answerImage: 'nonFunctionalRequirements.png',
     },
     {
-        // 13.
-        question: 'במערכת משחק קיימים אוביקטים שמיצגים תנועה של כלי רכב על כביש וכן אוביקטים שמייצגים תעופה בחלל. בשלב כלשהו בפיתוח הוחלט כי יש לאפשר גם כלי רכב שהם בעיקרם כלי טיס אך יש להם פונקציונליות של תנועה על הכביש (למשל מטוס נוסע על כביש). לצורך מימוש פונקציונלית זו יעשה שימוש בתבנית התיכון הבאה :',
-        options: [
-            {
-                right: false,
-                answer: 'תבנית תיכון מסוג Factory'
-            },
-            {
-                right: false,
-                answer: 'תבנית תיכון מסוג Interface'
-            },
-            {
-                right: false,
-                answer: 'תבנית תיכון מסוג Singleton'
-            },
-            {
-                right: true,
-                answer: 'תבנית תיכון מסוג Adapter'
-            },
-        ]
-    },
-    {
-        // 14.
         question: 'בשיטת מפל המים השלב שבו שינוי בדרישות יהיה בעל העלות הגבוהה ביותר יהיה',
         options: [
             {
@@ -1542,10 +1415,10 @@ const data: Question[] = [
                 right: true,
                 answer: 'שלב שבו המערכת כבר נמצאת אצל הלקוח (launched)'
             },
-        ]
+        ],
+        answerImage: 'waterfallStages.png'
     },
     {
-        // 15.
         question: 'בנית אב טיפוס יכול להיות חלק משלב הפיתוח הבא :',
         options: [
             {
@@ -1564,10 +1437,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'בדיקות לקוח'
             },
-        ]
+        ],
+        answerImage: 'requirementsValidation.png',
     },
     {
-        // 16.
         question: 'use case בתרשים',
         options: [
             {
@@ -1586,10 +1459,10 @@ const data: Question[] = [
                 right: false,
                 answer: 'כל ה cases-use של מערכת אחת מוצגים בתרשים אחד'
             },
-        ]
+        ],
+        answerImage: 'useCaseDiagramRecommendations.png',
     },
     {
-        // 17.
         question: 'אילו מהמשפטים הבאים מתאים לתהליכי פיתוח תוכנה הנדסי באופן כללי',
         options: [
             {
@@ -1608,11 +1481,12 @@ const data: Question[] = [
                 right: false,
                 answer: 'סט של כלים שחובה לממש אותם באותו אופן לכל חברת פיתוח תוכנה'
             },
-        ]
+        ],
+        answerImage: 'reuseCons.png'
     },
     {
         // 18.
-        question: 'חסרון \נות אופיני\ים לשימוש ב שיטת ה - Reuse',
+        question: 'חסרונות אופיניים לשימוש ב שיטת ה - Reuse',
         options: [
             {
                 right: true,
@@ -1630,7 +1504,8 @@ const data: Question[] = [
                 right: false,
                 answer: 'מהירות הפיתוח'
             },
-        ]
+        ],
+        answerImage: 'reuseCons.png',
     },
     {
         // 19.
@@ -1653,7 +1528,8 @@ const data: Question[] = [
                 right: true,
                 answer: 'יש יותר מתשובה אחת נכונה'
             },
-        ]
+        ],
+        answerImage: 'sequenceDiagram.png',
     },
 ]
 
