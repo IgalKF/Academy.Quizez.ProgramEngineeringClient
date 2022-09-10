@@ -12,11 +12,16 @@ const QuizItem = () => {
     const [selectedId, setSelectedId] = useState<Option>({ answer: '', right: false });
     const [scoreCount, setScoreCount] = useState<number>(1);
     const ref = createRef<HTMLDivElement>();
+    const buttonRef = createRef<HTMLButtonElement>();
 
     const createImage = () => {
         console.log(ref.current);
 
         if (ref.current) {
+            const x = buttonRef.current?.className!;
+            if (buttonRef.current){
+                buttonRef.current.className = 'invisible';
+            }
             htmlToImage.toBlob(ref.current)
                 .then(dataUrl => {
                     if (dataUrl) {
@@ -27,6 +32,9 @@ const QuizItem = () => {
                             files: [file],
                         };
 
+                        if (buttonRef.current){
+                            buttonRef.current.className = x;
+                        }
                         navigator.share(shareData);
                     }
                 })
@@ -63,7 +71,7 @@ const QuizItem = () => {
                     }
                     <div className="float-left mt-7">{!showResults ? <div>שאלות שנענו: {index}</div> : '...'}</div>
                     <div className="float-left mt-7">{!showResults ? 'ציון: ' + Math.floor(scoreCount / (index + 1) * 100) : '...'}</div>
-                    <button onClick={createImage} className="sm:invisible float-left bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">שתפו תוצאה</button>
+                    <button ref={buttonRef}  onClick={createImage} className="sm:invisible float-left bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">שתפו תמונה</button>
                 </div>
             </div>
         </div>
