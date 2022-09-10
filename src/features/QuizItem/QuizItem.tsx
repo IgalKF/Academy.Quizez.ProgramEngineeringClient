@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Option, x } from '../../data/program-engineering-data';
 import * as htmlToImage from 'html-to-image';
 import { toPng } from 'html-to-image';
+import { blob } from "stream/consumers";
 
 const QuizItem = () => {
 
@@ -17,19 +18,19 @@ const QuizItem = () => {
 
         if (ref.current) {
             htmlToImage.toPng(ref.current)
-                .then(function (dataUrl) {
+                .then(dataUrl => {
                     const file = new File(
                         [dataUrl],
-                        'meme.jpg',
+                        'image.jpg',
                         {
-                          type: "image/jpeg",
-                          lastModified: new Date().getTime()
+                            type: "image/jpeg",
+                            lastModified: new Date().getTime()
                         }
-                     )
-                    // window.open('whatsapp://send?text='+encodeURIComponent(dataUrl));
+                    )
                     const shareData = {
                         files: [file],
-                      };
+                    };
+
                     navigator.share(shareData);
                 })
                 .catch(function (error) {
@@ -58,13 +59,15 @@ const QuizItem = () => {
                         </div>
                     ))}
                 </form>
-                {showResults
-                    ? <button className="bg-slate-500 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); setIndex(index + 1); setSelectedId({ answer: '', right: false }); }}>המשך לשאלה הבאה</button>
-                    : <button disabled={selectedId.answer === ''} className="bg-slate-700 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); if (selectedId.right) setScoreCount(x => x + 1); }}>הצג את התשובות</button>
-                }
-                <div className="float-left mt-7 mr-5">{!showResults ? <div>שאלות שנענו: {index}</div> : '...'}</div>
-                <div className="float-left mt-7">{!showResults ? 'ציון: ' + Math.floor(scoreCount / (index + 1) * 100) : '...'}</div>
-                <button onClick={createImage} className="float-left bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">שתפו תוצאה</button>
+                <div className="flex flex-col-reverse">
+                    {showResults
+                        ? <button className="bg-slate-500 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); setIndex(index + 1); setSelectedId({ answer: '', right: false }); }}>המשך לשאלה הבאה</button>
+                        : <button disabled={selectedId.answer === ''} className="bg-slate-700 p-3 text-lg mt-5 rounded-xl" onClick={() => { setShowResults(!showResults); if (selectedId.right) setScoreCount(x => x + 1); }}>הצג את התשובות</button>
+                    }
+                    <div className="float-left mt-7">{!showResults ? <div>שאלות שנענו: {index}</div> : '...'}</div>
+                    <div className="float-left mt-7">{!showResults ? 'ציון: ' + Math.floor(scoreCount / (index + 1) * 100) : '...'}</div>
+                    <button onClick={createImage} className="sm:invisible float-left bg-slate-800 p-3 text-lg mt-5 ml-5 mr-5 rounded-xl">שתפו תוצאה</button>
+                </div>
             </div>
         </div>
     )
