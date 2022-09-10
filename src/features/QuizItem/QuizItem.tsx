@@ -95,6 +95,7 @@ const QuizItem = () => {
                 </div>
                 :
                 <div>
+                    * קרדיט לאנסטסיה המלכה
                     <img src={x[index].answerImage} alt='answer' />
                 </div>}
         </div>
