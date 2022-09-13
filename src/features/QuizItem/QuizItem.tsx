@@ -94,7 +94,7 @@ const QuizItem = () => {
                     </div>
                 </div>
                 :
-                <div style={{direction: 'rtl'}}>
+                <div style={{direction: 'rtl', fontSize: '16px'}}>
                     * קרדיט לאנסטסיה המלכה
                     <img src={x[index].answerImage} alt='answer' />
                 </div>}

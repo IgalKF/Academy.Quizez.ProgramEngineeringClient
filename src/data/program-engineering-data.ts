@@ -711,7 +711,7 @@ const data: Question[] = [
         question: 'annotation Before @על גבי מטוד ת up-set מבצע במהלך הטסט',
         options: [
             {
-                right: false,
+                right: true,
                 answer: 'הרצת המטודה פעם אחת לפני כל טסט'
             },
             {
@@ -719,7 +719,7 @@ const data: Question[] = [
                 answer: 'הרצת המטודה פעם אחת אחרי כל טסט'
             },
             {
-                right: true,
+                right: false,
                 answer: 'הרצת המטודה פעם אחת לפני הרצת כל הטסטים'
             },
             {
