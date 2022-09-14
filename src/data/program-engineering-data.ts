@@ -1046,11 +1046,11 @@ const data: Question[] = [
         question: 'מהו ציר האינטרקציה שיש לקרוא לכתוב את ה - sequence diagram',
         options: [
             {
-                right: true,
+                right: false,
                 answer: 'top to bottom'
             },
             {
-                right: false,
+                right: true,
                 answer: 'left to right'
             },
             {
